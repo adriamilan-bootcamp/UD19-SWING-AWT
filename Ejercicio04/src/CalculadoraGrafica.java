@@ -58,27 +58,96 @@ public class CalculadoraGrafica extends JFrame {
 		
 		JButton btnSumar = new JButton("Sumar");
 		btnSumar.setBounds(130, 10, 117, 25);
+		
+		btnSumar.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				textPane_1_1.setText(String.valueOf(Double.parseDouble(textPane.getText()) + Double.parseDouble(textPane_1.getText())));
+				
+			}
+		});
 		contentPane.add(btnSumar);
 		
 		JButton btnRestar = new JButton("Restar");
 		btnRestar.setBounds(130, 40, 117, 25);
+		
+		btnRestar.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				textPane_1_1.setText(String.valueOf(Double.parseDouble(textPane.getText()) - Double.parseDouble(textPane_1.getText())));
+				
+			}
+		});
 		contentPane.add(btnRestar);
 		
 		JButton btnSumar_1_1 = new JButton("Multiplicar");
 		btnSumar_1_1.setBounds(130, 70, 117, 25);
+		
+		btnSumar_1_1.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				textPane_1_1.setText(String.valueOf(Double.parseDouble(textPane.getText()) * Double.parseDouble(textPane_1.getText())));
+				
+			}
+		});
 		contentPane.add(btnSumar_1_1);
 		
 		JButton btnSumar_1_1_1 = new JButton("Dividir");
 		btnSumar_1_1_1.setBounds(130, 100, 117, 25);
+		
+		btnSumar_1_1_1.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				textPane_1_1.setText(String.valueOf(Double.parseDouble(textPane.getText()) / Double.parseDouble(textPane_1.getText())));
+				
+			}
+		});
 		contentPane.add(btnSumar_1_1_1);
 		
 		JButton btnSumar_1_1_1_1 = new JButton("Salir");
 		btnSumar_1_1_1_1.setBounds(130, 130, 117, 25);
+		
+		btnSumar_1_1_1_1.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				System.exit(0);
+				
+			}
+		});
 		contentPane.add(btnSumar_1_1_1_1);
+		
+		
+		JLabel labelAns = new JLabel("");
+		labelAns.setBounds(303, 32, 46, 14);
+		contentPane.add(labelAns);
+		
 		
 		JButton btnSumar_1_1_1_1_1 = new JButton("About");
 		btnSumar_1_1_1_1_1.setBounds(275, 130, 117, 25);
+		
+		btnSumar_1_1_1_1_1.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				JOptionPane.showMessageDialog(null, "Creadores:\n=> Felipe\n=> Adria\n=> Josep\n\nOpenJDK 1.8\nMiniCalculadora 1.0v");
+				
+			}
+		});
+		
 		contentPane.add(btnSumar_1_1_1_1_1);
+		
+		
 		
 	}
 }
