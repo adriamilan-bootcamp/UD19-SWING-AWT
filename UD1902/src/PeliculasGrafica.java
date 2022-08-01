@@ -71,6 +71,5 @@ public class PeliculasGrafica extends JFrame {
 		});
 		
 		contentPane.add(buttonAdd);
-		
 	}
 }
